@@ -15,13 +15,18 @@ const App = () => {
     return <PackView />;
   };
   return (
-    <div className="flex flex-col items-center w-screen min-h-screen overflow-y-auto g1 space-y-10">
-      <div className="text-pink4 uppercase text-xl sm:text-4xl font-extrabold ">Layout Tabs</div>
+    <div className="flex flex-col items-center w-full min-h-screen overflow-hidden g1 space-y-10">
+      <div className="text-pink4 uppercase text-xl sm:text-4xl font-extrabold ">
+        Layout Tabs
+      </div>
       <ToggleView onChange={setViewMode} />
       <AnimatedViewContainer viewMode={viewMode}>
         {renderContent()}
       </AnimatedViewContainer>
-      <WalletButton/>
+      <WalletButton />
+      <p className="text-sm italic text-pink3 mt-4">
+        Tip: ETH gas fees are low right now!
+      </p>
     </div>
   );
 };
